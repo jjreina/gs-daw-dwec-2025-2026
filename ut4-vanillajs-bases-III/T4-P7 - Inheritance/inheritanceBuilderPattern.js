@@ -99,7 +99,7 @@ let movie = new MovieBuilder("31 de octubre de 1961", "Pukerua Bay, Nueva Zeland
   .setTitle("El Señor de los Anillos: La Comunidad del Anillo")
   .setYear(2001)
   .setGenre("Fantasía")
-  .setDuration(178)
+  .setDuration(179)
   .setRating(9.2)
   .setSynopsis("Un hobbit llamado Frodo Baggins emprende un viaje épico para destruir un anillo malévolo y evitar que caiga en manos del Señor Oscuro Sauron.")
   .build();
