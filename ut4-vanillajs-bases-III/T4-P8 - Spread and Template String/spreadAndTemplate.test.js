@@ -1,4 +1,4 @@
-import * as utils from "./spreadAndTemplate.js";
+import * as utils from "./spreadAndTemplate_solution";
 
 describe("Spread Operator", () => {
   it("should merge two arrays", () => {

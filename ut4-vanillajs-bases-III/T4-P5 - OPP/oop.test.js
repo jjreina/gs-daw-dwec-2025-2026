@@ -12,7 +12,10 @@ describe("OOP", () => {
     expect(book_1.published).toBe("1554");
   });
   it("should gets title, author and published for The NeverEnding Story", () => {
-    let book_2 = new Books("The NeverEnding Story", "Michael Ende", "1984");
+    let book_2 = new Books();
+    book_2.title = "The NeverEnding Story";
+    book_2.author = "Michael Ende";
+    book_2.published = "1984";
     expect(book_2.title).toBe("The NeverEnding Story");
     expect(book_2.author).toBe("Michael Ende");
     expect(book_2.published).toBe("1984");
