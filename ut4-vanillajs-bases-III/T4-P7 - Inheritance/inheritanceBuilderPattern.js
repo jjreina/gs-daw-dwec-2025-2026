@@ -15,14 +15,11 @@ class Birth {
 }
 
 class DirectorBuilder extends Birth {
-  name;
-  nationality;
-  notableFilmography;
+  name = "";
+  nationality = "";
+  notableFilmography = [];
   constructor(date, place) {
     super(date, place);
-    this.name = '';
-    this.nationality = '';
-    this.notableFilmography = [];
   }
 
   setName(name) {
@@ -37,30 +34,34 @@ class DirectorBuilder extends Birth {
 
   setNotableFilmography(notableFilmography) {
     this.notableFilmography = notableFilmography;
-    return this;      
+    return this;
   }
 
   build() {
-    return new DirectorBuilder(this.date, this.place, this.name, this.nationality, this.notableFilmography);
+    return {
+      date: this.date,
+      place: this.place,
+      name: this.name,
+      nationality: this.nationality,
+      notableFilmography: [...this.notableFilmography],
+    };
   }
-
 }
 
 export class MovieBuilder extends DirectorBuilder {
-  title;
-  year;
-  genre;
-  duration;
-  rating;     
-  synopsis;
+  title = "";
+  year = 0;
+  genre = "";
+  duration = 0;
+  rating = 0;
+  synopsis = "";
   constructor(date, place) {
     super(date, place);
-    this.title = '';
-    this.year = 0;
-    this.genre = '';
-    this.duration = 0;
-    this.rating = 0;     
-    this.synopsis = '';
+  }
+
+  setTitle(title) {
+    this.title = title;
+    return this;
   }
 
   setYear(year) {
@@ -84,22 +85,40 @@ export class MovieBuilder extends DirectorBuilder {
   }
   setSynopsis(synopsis) {
     this.synopsis = synopsis;
-    return this;      
-  } 
+    return this;
+  }
   build() {
-    return new MovieBuilder(this.date, this.place, this.name, this.nationality, this.notableFilmography, this.title, this.year, this.genre, this.duration, this.rating, this.synopsis);
-  } 
-
+    return {
+      date: this.date,
+      place: this.place,
+      name: this.name,
+      nationality: this.nationality,
+      notableFilmography: this.notableFilmography,
+      title: this.title,
+      year: this.year,
+      genre: this.genre,
+      duration: this.duration,
+      rating: this.rating,
+      synopsis: this.synopsis,
+    };
+  }
 }
 
-let movie = new MovieBuilder("31 de octubre de 1961", "Pukerua Bay, Nueva Zelanda")
+let movie = new MovieBuilder(
+  "31 de octubre de 1961",
+  "Pukerua Bay, Nueva Zelanda"
+)
   .setName("Peter Jackson")
-  .setNationality("Neozelandés")  
+  .setNationality("Neozelandés")
   .setNotableFilmography(["El Señor de los Anillos", "El Hobbit", "King Kong"])
   .setTitle("El Señor de los Anillos: La Comunidad del Anillo")
   .setYear(2001)
   .setGenre("Fantasía")
   .setDuration(179)
   .setRating(9.2)
-  .setSynopsis("Un hobbit llamado Frodo Baggins emprende un viaje épico para destruir un anillo malévolo y evitar que caiga en manos del Señor Oscuro Sauron.")
+  .setSynopsis(
+    "Un hobbit llamado Frodo Baggins emprende un viaje épico para destruir un anillo malévolo y evitar que caiga en manos del Señor Oscuro Sauron."
+  )
   .build();
+
+console.log(movie);
