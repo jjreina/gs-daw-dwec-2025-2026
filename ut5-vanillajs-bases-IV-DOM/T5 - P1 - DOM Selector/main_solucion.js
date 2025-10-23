@@ -11,7 +11,7 @@ import {
   getTextArea,
   getThemeSelectedOption,
   getColorSelectedRadio,
-  getCheckBoxSelected
+  getCheckBoxSelected,
 } from "./utils_solucion.js";
 
 console.log(getAllChipClass());
@@ -28,8 +28,8 @@ console.log(getTextArea());
 console.log("--------------------------------------------------");
 
 console.log("Mostrar todos los textos de los elementos con clase Chip....");
-Array.from(getAllChipClass()).forEach((p) => {
-  console.log(p.textContent);
+Array.from(getAllChipClass()).forEach((span) => {
+  console.log(span.textContent);
 });
 
 console.log("Mostrar todos los textos de los párrafos....");
