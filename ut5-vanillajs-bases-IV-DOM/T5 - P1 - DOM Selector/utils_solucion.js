@@ -15,19 +15,19 @@ export const getAllOptionFromThemeSelect = () => {
 };
 
 export const getUserFromForm = () => {
-  return document.getElementById("usuario");
+  return document.querySelector("#usuario");
 };
 
 export const getMailFromForm = () => {
-  return document.getElementById("correo");
+  return document.querySelector("#correo");
 };
 
 export const getAllColorRadios = () => {
-  return document.querySelectorAll('input[name="color"]');
+  return document.querySelectorAll('[name="color"]');
 };
 
 export const getAllCheckboxes = () => {
-  return document.querySelectorAll('input[type="checkbox"]');
+  return document.querySelectorAll('[type="checkbox"]');
 };
 
 export const getAllOptionsFromCursosSelect = () => {
@@ -35,7 +35,7 @@ export const getAllOptionsFromCursosSelect = () => {
 };
 
 export const getTextArea = () => {
-  return document.getElementById("bio");
+  return document.querySelector("#bio");
 };
 
 export const getThemeSelectedOption = () => {

@@ -62,15 +62,15 @@ Array.from(getAllColorRadios()).forEach((radio) => {
 console.log("Mostrar el radio seleccionado de colores....");
 console.log(getColorSelectedRadio().value);
 
-console.log("mostrar todos los checkboxes....");
+console.log("Mostrar todos los checkboxes....");
 Array.from(getAllCheckboxes()).forEach((checkbox) => {
   console.log(`${checkbox.value} -> ${checkbox.checked}`);
 });
 
-console.log("mostrar el checkbox seleccionado....");
+console.log("Mostrar el checkbox seleccionado....");
 console.log(getCheckBoxSelected().value);
 
-console.log("mostrar todas las opciones del select de cursos....");
+console.log("Mostrar todas las opciones del select de cursos....");
 Array.from(getAllOptionsFromCursosSelect()).forEach((option) => {
   console.log(`${option.value} -> ${option.textContent}`);
 });
