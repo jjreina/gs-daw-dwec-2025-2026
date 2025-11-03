@@ -33,11 +33,11 @@ const texts = [
 ];
 
 styles.forEach((style, i) => {
-  let elemnt = document.createElement("a");
-  elemnt.className = style;
-  elemnt.href = "#";
-  elemnt.textContent = texts[i];
-  div.append(elemnt);
+  let anchor = document.createElement("a");
+  anchor.className = style;
+  anchor.href = "#";
+  anchor.textContent = texts[i];
+  div.append(anchor);
 });
 
 body.append(div);
