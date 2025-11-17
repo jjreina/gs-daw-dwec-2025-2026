@@ -1,9 +1,13 @@
-import { fetchCarData } from './utils.js';
+import { fetchCarData, fetchCarMakes } from "./utils.js";
+import { containerRadioGroup } from "./helperDOM.js";
 
-let cars
+let makes;
 const run = async () => {
-	cars = await fetchCarData();
-	console.log(cars);
-}
+  makes = await fetchCarMakes();
+  // console.log(makes.slice(0, 5));
+  const containerRadios = document.querySelector(".radio-container");
+  const radioGroup = containerRadioGroup(makes.slice(0, 5));
+  containerRadios.appendChild(radioGroup);
+};
 
 run();
