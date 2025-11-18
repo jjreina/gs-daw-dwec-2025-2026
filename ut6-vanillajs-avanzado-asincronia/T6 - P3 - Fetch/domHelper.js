@@ -57,7 +57,7 @@ const changeRadioSelection = (newRadio) => {
   });
 };
 
-export const containerRadioGroup = (makes) => {
+export const containerRadioGroup = (makes, cardsGrid) => {
   const container = document.createElement("div");
   container.className = "radio-group";
   makes.forEach((make, index) => {
@@ -69,8 +69,7 @@ export const containerRadioGroup = (makes) => {
       setTimeout(() => { // necesario porque la primera vez se envian dos peticiones casi seguidas: makes y cars
         fetchCarDataByMake(input.value).then((data) => {
           data.forEach(card => {
-          document.querySelector(".cards-grid").appendChild( 
-            createCard(card));
+          cardsGrid.appendChild(createCard(card));
           });
         });
       }, 1000);
