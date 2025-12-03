@@ -1,4 +1,4 @@
-const URL_CARS = "https://car-data.p.rapidapi.com/cars?limit=5&page=0";
+const URL_CARS = "https://car-data.p.rapidapi.com/cars?limit=8&page=0&make=";
 const URL_MAKES = "https://car-data.p.rapidapi.com/cars/makes";
 const options = {
   method: "GET",
@@ -8,8 +8,8 @@ const options = {
   },
 };
 
-export const fetchCarData = async () => {
-  const response = await fetch(URL_CARS, options);
+export const fetchCarDataByMake = async (make) => {
+  const response = await fetch(`${URL_CARS}${make}`, options);
 
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}`);
