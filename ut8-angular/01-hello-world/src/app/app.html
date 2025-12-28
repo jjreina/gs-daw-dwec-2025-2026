@@ -1,0 +1,13 @@
+<h1 (mouseover)="helloWorld($event)">Hello World Angular</h1>
+<p #welcomeMessage>Welcome to your Angular app!</p>
+<h2>{{ welcomeMessage.textContent }}</h2>
+<hr />
+<div>
+  <input type="text" class="form-control" placeholder="Enter Name" #inputName />
+  <button type="button" class="btn btn-secondary" (click)="clickEvent(inputName.value)">
+    Click Me!!
+  </button>
+  <span>Name: {{ this.inputValue }}</span>
+</div>
+
+<router-outlet />
