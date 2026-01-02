@@ -19,4 +19,7 @@
   {{ selectElement.selectedOptions[0].textContent }}
   }
 </p>
+<hr />
+<input type="text" class="form-control" [(ngModel)]="inputText" />
+<span>You input text: {{ inputText }}</span>
 <router-outlet />
