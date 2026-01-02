@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('02-two-way-binding');
-  protected selectedOption: string = '0';
+  protected selectedOption: number = 0;
 }
