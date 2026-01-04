@@ -1,0 +1,11 @@
+<h1>{{ this.title() }}</h1>
+<hr />
+<div>
+  <span>Counter:</span>
+  <span>{{ this.account }}</span>
+  <br />
+  <button (click)="onClick($event)">-</button>
+  <button (click)="reset()">Reset</button>
+  <button (click)="onClick($event)">+</button>
+</div>
+<router-outlet />
