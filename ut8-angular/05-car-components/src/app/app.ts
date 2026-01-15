@@ -11,5 +11,10 @@ import { CarTwo } from './cars/car-two/car-two';
   styleUrl: './app.css',
 })
 export class App {
-  protected title = 'Mock Data Cars';
+  protected title: string = 'Mock Data Cars';
+  protected carSelected: string = '';
+
+  protected onSelectCar(car: string): void {
+    this.carSelected = car;
+  }
 }
