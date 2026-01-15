@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+}
+
+.container-cars {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}
