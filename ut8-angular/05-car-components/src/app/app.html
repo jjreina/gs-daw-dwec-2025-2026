@@ -1,11 +1,11 @@
 <h1>{{ title }}</h1>
 <div class="container-cars">
   @if (this.carSelected === '' || this.carSelected === 'cero') {
-  <app-car-cero></app-car-cero>
+    <app-car-cero></app-car-cero>
   } @else if (this.carSelected === 'one') {
-  <app-car-one></app-car-one>
+    <app-car-one></app-car-one>
   } @else {
-  <app-car-two></app-car-two>
+    <app-car-two></app-car-two>
   }
 </div>
 <div class="container-select-car">
@@ -13,5 +13,7 @@
   <button class="btn btn-primary" (click)="onSelectCar('one')">Mini</button>
   <button class="btn btn-primary" (click)="onSelectCar('two')">Volvo</button>
 </div>
+<hr />
+<app-all-cars></app-all-cars>
 
 <router-outlet />

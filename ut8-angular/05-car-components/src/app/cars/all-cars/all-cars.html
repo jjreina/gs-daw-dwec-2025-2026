@@ -1,0 +1,18 @@
+<h3>For Control Flow</h3>
+<ul class="list-group">
+  @for (car of cars; track car.id; let i = $index) {
+    <li class="list-group-item">
+      <span
+        ><strong>Car {{ i + 1 }}:</strong></span
+      >
+      <br />
+      <span>{{ car.year }}</span>
+      <br />
+      <span>{{ car.make }}</span>
+      <br />
+      <span>{{ car.model }}</span>
+      <br />
+      <span>{{ car.type }}</span>
+    </li>
+  }
+</ul>
