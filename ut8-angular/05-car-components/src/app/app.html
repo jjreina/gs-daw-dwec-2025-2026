@@ -1,17 +1,17 @@
 <h1>{{ title }}</h1>
 <div class="container-cars">
-  @if (this.carSelected === '' || this.carSelected === 'cero') {
+  @if (this.carSelected === '' || this.carSelected === 'Buick') {
   <app-car-cero></app-car-cero>
-  } @else if (this.carSelected === 'one') {
+  } @else if (this.carSelected === 'Mini') {
   <app-car-one></app-car-one>
   } @else {
   <app-car-two></app-car-two>
   }
 </div>
 <div class="container-select-car">
-  <button class="btn btn-primary" (click)="onSelectCar('cero')">Buick</button>
-  <button class="btn btn-primary" (click)="onSelectCar('one')">Mini</button>
-  <button class="btn btn-primary" (click)="onSelectCar('two')">Volvo</button>
+  <button class="btn btn-primary" (click)="onSelectCar($event)">Buick</button>
+  <button class="btn btn-primary" (click)="onSelectCar($event)">Mini</button>
+  <button class="btn btn-primary" (click)="onSelectCar($event)">Volvo</button>
 </div>
 
 <router-outlet />

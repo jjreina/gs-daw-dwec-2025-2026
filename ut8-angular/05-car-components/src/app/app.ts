@@ -14,7 +14,7 @@ export class App {
   protected title: string = 'Mock Data Cars';
   protected carSelected: string = '';
 
-  protected onSelectCar(car: string): void {
-    this.carSelected = car;
+  protected onSelectCar(event: any): void {
+    this.carSelected = event.target.textContent;
   }
 }
