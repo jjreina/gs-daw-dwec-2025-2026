@@ -1,0 +1,56 @@
+<div class="dni">
+  <div class="dni-header">
+    <div class="dni-title">DOCUMENTO NACIONAL DE IDENTIDAD</div>
+    <div class="dni-flag">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="red"></span>
+    </div>
+  </div>
+
+  <div class="dni-body">
+    <div class="dni-photo">
+      <span>FOTO</span>
+    </div>
+
+    <div class="dni-data">
+      <div class="field">
+        <label>Apellidos</label>
+        <span>{{ surname() }}</span>
+      </div>
+
+      <div class="field">
+        <label>Nombre</label>
+        <span>{{ name() }}</span>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>DNI</label>
+          <span>{{ dniNumber() }}</span>
+        </div>
+
+        <div class="field">
+          <label>Nacionalidad</label>
+          <span>ESP</span>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Fecha de nacimiento</label>
+          <span>01/01/2000</span>
+        </div>
+
+        <div class="field">
+          <label>Sexo</label>
+          <span>H</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dni-footer">
+    <span>Válido hasta: 01/01/2030</span>
+  </div>
+</div>

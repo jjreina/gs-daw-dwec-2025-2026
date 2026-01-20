@@ -1,0 +1,93 @@
+.dni {
+  width: 420px;
+  height: 260px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+  border: 2px solid #999;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER */
+.dni-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dni-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dni-flag {
+  width: 40px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dni-flag .red {
+  background-color: #c60b1e;
+  height: 25%;
+}
+
+.dni-flag .yellow {
+  background-color: #ffc400;
+  height: 50%;
+}
+
+/* BODY */
+.dni-body {
+  display: flex;
+  gap: 12px;
+}
+
+.dni-photo {
+  width: 90px;
+  height: 120px;
+  border: 1px solid #666;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #555;
+}
+
+.dni-data {
+  flex: 1;
+  font-size: 11px;
+}
+
+.field {
+  margin-bottom: 6px;
+}
+
+.field label {
+  display: block;
+  font-size: 9px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.field span {
+  font-weight: bold;
+  color: #000;
+}
+
+.field-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* FOOTER */
+.dni-footer {
+  margin-top: 8px;
+  font-size: 10px;
+  text-align: right;
+  color: #333;
+}
