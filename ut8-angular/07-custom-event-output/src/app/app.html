@@ -1,0 +1,13 @@
+<div>
+  <p #name>Nombre:</p>
+  <p #email>Email:</p>
+  <p #message>Mensaje:</p>
+</div>
+<app-login
+  (onSubmit)="
+    name.textContent = name.textContent + $event.name;
+    email.textContent = email.textContent + $event.email;
+    message.textContent = message.textContent + $event.message
+  "
+></app-login>
+<router-outlet></router-outlet>
