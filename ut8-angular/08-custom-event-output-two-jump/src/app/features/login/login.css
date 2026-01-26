@@ -11,3 +11,12 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+div {
+  text-align: center;
+}

@@ -1,16 +1,13 @@
-import { Component, input, output } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { LoginData } from '../../model/login-data';
 
 @Component({
-  selector: 'app-form-textarea',
+  selector: 'app-form-content',
   imports: [],
-  templateUrl: './form-textarea.html',
-  styleUrl: './form-textarea.css',
+  templateUrl: './form-content.html',
+  styleUrl: './form-content.css',
 })
-export class FormTextarea {
-  public labelText = input<string>('');
-  public rows = input<number>(0);
-
+export class FormContent {
   public onSubmit = output<LoginData>();
 
   public submit(name: string, email: string, message: string): void {

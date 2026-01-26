@@ -1,4 +1,8 @@
+<div>
+  <p>Nombre: {{ this.name }}</p>
+  <p>Email: {{ this.email }}</p>
+  <p>Mensaje: {{ this.message }}</p>
+</div>
 <div class="container">
-  <h2>Formulario de contacto</h2>
-  <app-form></app-form>
+  <app-form (emitLoginData)="handleLoginData($event)"></app-form>
 </div>

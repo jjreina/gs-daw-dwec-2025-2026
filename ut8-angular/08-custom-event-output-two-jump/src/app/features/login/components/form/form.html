@@ -1,6 +1,2 @@
-<app-form-textarea [labelText]="'Nombre'" [rows]="1"></app-form-textarea>
-<app-form-textarea [labelText]="'Email'" [rows]="1"></app-form-textarea>
-<app-form-textarea [labelText]="'Mensaje'" [rows]="4"></app-form-textarea>
-
-<!-- <button (click)="submit(name.value, email.value, message.value)" type="submit">Enviar</button>-->
-<button type="submit">Enviar</button>
+<h2>Formulario de contacto</h2>
+<app-form-content (onSubmit)="handleLoginData($event)"></app-form-content>

@@ -8,8 +8,4 @@ import { Login } from './features/login/login';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected name: string = '';
-  protected email: string = '';
-  protected message: string = '';
-}
+export class App {}
