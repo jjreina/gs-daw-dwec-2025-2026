@@ -1,5 +1,4 @@
-import { Component, input, output } from '@angular/core';
-import { LoginData } from './model/login-data';
+import { Component } from '@angular/core';
 import { Form } from './components/form/form';
 
 @Component({
@@ -8,15 +7,4 @@ import { Form } from './components/form/form';
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class Login {
-  public onSubmit = output<LoginData>();
-
-  public submit(name: string, email: string, message: string): void {
-    let logingData: LoginData = {
-      name: name,
-      email: email,
-      message: message,
-    };
-    this.onSubmit.emit(logingData);
-  }
-}
+export class Login {}
