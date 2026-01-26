@@ -1,13 +1,13 @@
 <div>
-  <p #name>Nombre:</p>
-  <p #email>Email:</p>
-  <p #message>Mensaje:</p>
+  <p name>Nombre: {{this.name}}</p>
+  <p email>Email: {{this.email}}</p>
+  <p message>Mensaje: {{this.email}}</p>
 </div>
 <app-login
   (onSubmit)="
-    name.textContent = name.textContent + $event.name;
-    email.textContent = email.textContent + $event.email;
-    message.textContent = message.textContent + $event.message
+    this.name = $event.name;
+    this.email = $event.email;
+    this.message = $event.message;
   "
 ></app-login>
 <router-outlet></router-outlet>
