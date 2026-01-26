@@ -1,9 +1,10 @@
 import { Component, input, output } from '@angular/core';
 import { LoginData } from './model/login-data';
+import { Form } from './components/form/form';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [Form],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })

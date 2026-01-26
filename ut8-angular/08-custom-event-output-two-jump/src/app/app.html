@@ -1,0 +1,9 @@
+<div>
+  <p>Nombre: {{ this.name }}</p>
+  <p>Email: {{ this.email }}</p>
+  <p>Mensaje: {{ this.message }}</p>
+</div>
+<app-login
+  (onSubmit)="this.name = $event.name; this.email = $event.email; this.message = $event.message"
+></app-login>
+<router-outlet></router-outlet>
