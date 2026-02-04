@@ -10,5 +10,17 @@
   } @else if (provincesResource.error()) {
     <p>{{ provincesResource.error()?.message }}</p>
   }
+
+  <hr />
+  <h1>Movies</h1>
+  @if (this.fecthMovies.hasValue() && this.fecthMovies.value().length > 0) {
+    @for (movie of this.fecthMovies.value(); track movie.id) {
+      <p>{{ movie.primaryTitle }}</p>
+    }
+  } @else if (this.fecthMovies.isLoading()) {
+    <p>Loading movies...</p>
+  } @else if (this.fecthMovies.error()) {
+    <p>{{ this.fecthMovies.error()?.message }}</p>
+  }
 </div>
 <router-outlet />
