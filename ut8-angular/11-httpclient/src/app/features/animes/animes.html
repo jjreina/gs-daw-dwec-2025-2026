@@ -1,1 +1,22 @@
-<p>animes works!</p>
+@if (this.animesApi.getAllAnimes.hasValue() && this.animesApi.getAllAnimes.value().length > 0) {
+  <div class="anime-list">
+    @for (anime of this.animesApi.getAllAnimes.value(); track anime.id) {
+      <article class="anime-card">
+        <span (click)="deleteAnimeById(anime.id)" class="anime-close" aria-hidden="true">x</span>
+        <h3 class="anime-title">{{ anime.title }}</h3>
+        <p class="anime-original">{{ anime.originalTitle }}</p>
+        <p class="anime-meta">Episodes: {{ anime.episodes }}</p>
+        <p class="anime-meta">Finished: {{ anime.finished }}</p>
+        @for (genre of anime.genres; track $index) {
+          <p class="anime-genre">{{ genre }}</p>
+        }
+        <p class="anime-meta">Rating: {{ anime.rating }}</p>
+        <p class="anime-meta">Year: {{ anime.year }}</p>
+      </article>
+    }
+  </div>
+} @else if (this.animesApi.getAllAnimes.isLoading()) {
+  <p class="anime-state">Loading...</p>
+} @else if (this.animesApi.getAllAnimes.error()) {
+  <p class="anime-state anime-state--error">{{ this.animesApi.getAllAnimes.error()?.message }}</p>
+}
