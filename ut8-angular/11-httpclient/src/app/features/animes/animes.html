@@ -2,6 +2,7 @@
   <div class="anime-list">
     @for (anime of this.animesApi.getAllAnimes.value(); track anime.id) {
       <article class="anime-card">
+        <span (click)="editAnimeById(anime.id)" class="anime-edit" aria-label="Edit anime">✎</span>
         <span (click)="deleteAnimeById(anime.id)" class="anime-close" aria-hidden="true">x</span>
         <h3 class="anime-title">{{ anime.title }}</h3>
         <p class="anime-original">{{ anime.originalTitle }}</p>
