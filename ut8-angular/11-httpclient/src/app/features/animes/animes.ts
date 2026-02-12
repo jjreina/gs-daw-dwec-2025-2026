@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AnimeApi } from './services/anime-api';
+import { AddAnime } from './components/add-anime/add-anime';
 
 @Component({
   selector: 'app-animes',
   standalone: true,
-  imports: [],
+  imports: [AddAnime],
   templateUrl: './animes.html',
   styleUrl: './animes.css',
 })

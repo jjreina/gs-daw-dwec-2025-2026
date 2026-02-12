@@ -1,0 +1,102 @@
+.add-anime {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 24px;
+  background: #f9fafb;
+  border: 1px solid #e6e9ee;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px #0e182814;
+  color: #1f2937;
+}
+
+.add-anime__header h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.add-anime__header p {
+  margin: 0 0 20px;
+  color: #6b7280;
+}
+
+.add-anime__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: #111827;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.field--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 26px;
+}
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.actions button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.actions button.secondary {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.actions button:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 560px) {
+  .add-anime {
+    padding: 18px;
+  }
+
+  .field--checkbox {
+    padding-top: 0;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

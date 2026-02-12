@@ -16,6 +16,8 @@
       </article>
     }
   </div>
+  <hr />
+  <app-add-anime></app-add-anime>
 } @else if (this.animesApi.getAllAnimes.isLoading()) {
   <p class="anime-state">Loading...</p>
 } @else if (this.animesApi.getAllAnimes.error()) {

@@ -9,3 +9,11 @@ export interface Anime {
   rating: number;
   finished: boolean;
 }
+
+export interface FormAnime {
+  name: string;
+  year: number;
+  episodes: number;
+  finished: string;
+  rating: number;
+}

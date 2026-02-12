@@ -1,0 +1,83 @@
+<section class="add-anime">
+  <header class="add-anime__header">
+    <h2>Nuevo anime</h2>
+    <p>Completa los datos para registrar un anime.</p>
+  </header>
+
+  <form class="add-anime__form" (submit)="addNewAnime($event)">
+    <div class="field">
+      <label for="anime-name">Nombre</label>
+      <input
+        id="anime-name"
+        name="name"
+        type="text"
+        placeholder="Ej. Fullmetal Alchemist"
+        #inputName
+      />
+    </div>
+
+    <div class="field">
+      <label for="anime-episodes">Episodios</label>
+      <input
+        id="anime-episodes"
+        name="episodes"
+        type="number"
+        min="1"
+        placeholder="64"
+        #inputEpisodes
+      />
+    </div>
+
+    <div class="field field--checkbox">
+      <input id="anime-finished" name="finished" type="checkbox" #checkFinished />
+      <label for="anime-finished">Finalizado</label>
+    </div>
+
+    <div class="field">
+      <label for="anime-genre">Genero</label>
+      <select id="anime-genre" name="genre">
+        <option value="" selected>Selecciona un genero</option>
+        <option value="accion">Accion</option>
+        <option value="aventura">Aventura</option>
+        <option value="comedia">Comedia</option>
+        <option value="drama">Drama</option>
+        <option value="fantasia">Fantasia</option>
+        <option value="ciencia-ficcion">Ciencia ficcion</option>
+        <option value="romance">Romance</option>
+        <option value="suspense">Suspense</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="anime-rating">Rating</label>
+      <input
+        id="anime-rating"
+        name="rating"
+        type="number"
+        min="1"
+        max="10"
+        step="0.1"
+        placeholder="8.5"
+        #inputRating
+      />
+    </div>
+
+    <div class="field">
+      <label for="anime-year">Ano de estreno</label>
+      <input
+        id="anime-year"
+        name="year"
+        type="number"
+        min="1950"
+        max="2100"
+        placeholder="2009"
+        #inputYear
+      />
+    </div>
+
+    <div class="actions">
+      <button type="submit">Guardar anime</button>
+      <button type="reset" class="secondary">Limpiar</button>
+    </div>
+  </form>
+</section>
