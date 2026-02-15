@@ -20,4 +20,8 @@ export class AnimeApi {
   public readonly updateAnimeById = (idAnime: number, newEpisodes: number): Observable<Anime> => {
     return this.http.patch<Anime>(`${this.url}/${idAnime}`, { episodes: newEpisodes });
   };
+
+  public readonly addNewAnime = (anime: Anime): Observable<Anime> => {
+    return this.http.post<Anime>(this.url, anime);
+  };
 }
