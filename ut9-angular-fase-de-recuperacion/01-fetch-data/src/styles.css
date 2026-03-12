@@ -1,0 +1,15 @@
+html {
+	box-sizing: border-box;
+	font-family: Inter, system-ui, sans-serif;
+	background-color: #f8fafc;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}

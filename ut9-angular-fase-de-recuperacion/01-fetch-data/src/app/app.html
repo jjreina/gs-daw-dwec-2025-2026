@@ -1,0 +1,37 @@
+<main class="page">
+  <section class="hero">
+    <span class="hero__eyebrow">Angular + Fetch Data</span>
+    <h1>Catálogo de productos</h1>
+    <p>
+      Base visual sencilla para empezar a trabajar con peticiones y renderizado de datos.
+    </p>
+  </section>
+
+  <section class="products-section">
+    @if (this.productsApi.getAllProducts.hasValue() && this.productsApi.getAllProducts.value()) {
+      <div class="products-grid">
+        @for (product of this.productsApi.getAllProducts.value(); track product.id) {
+          <article class="product-card">
+            <div class="product-card__header">
+              <span class="product-card__price">{{ product.price }} €</span>
+              <span class="product-card__rating">★ {{ product.rating.rate }}</span>
+            </div>
+
+            <h2>{{ product.title }}</h2>
+            <p class="product-card__description">{{ product.description }}</p>
+
+            <div class="product-card__footer">
+              <span>{{ product.rating.count }} valoraciones</span>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="empty-state">
+        <p>Cargando productos...</p>
+      </div>
+    }
+  </section>
+</main>
+
+<router-outlet />
