@@ -1,0 +1,11 @@
+@if (this.productsApi.getAllProducts.hasValue() && this.productsApi.getAllProducts.value()) {
+      <app-list-products class="products-grid" [products]="this.productsApi.getAllProducts.value()"></app-list-products>
+    } @else if (this.productsApi.getAllProducts.isLoading()) {
+      <div class="empty-state">
+        <p>Cargando productos...</p>
+      </div>
+    } @else if (this.productsApi.getAllProducts.error()) {
+      <div class="empty-state">
+        <p>{{ this.productsApi.getAllProducts.error()?.message }}</p>
+      </div>
+    }

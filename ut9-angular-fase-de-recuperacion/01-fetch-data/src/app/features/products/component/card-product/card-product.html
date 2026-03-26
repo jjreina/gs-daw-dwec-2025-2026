@@ -1,0 +1,11 @@
+<article class="product-card">
+    <div class="product-card__header">
+    <span class="product-card__price">{{ this.product()?.price }} €</span>
+    <span class="product-card__rating">★ {{ this.product()?.rating?.rate }}</span>
+    </div>
+    <h2>{{ this.product()?.title }}</h2>
+    <p class="product-card__description">{{ this.product()?.description }}</p>
+    <div class="product-card__footer">
+      <span>{{ this.product()?.rating?.count }} valoraciones</span>
+    </div>
+  </article>
