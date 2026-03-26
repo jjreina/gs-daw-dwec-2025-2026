@@ -6,7 +6,6 @@ import { ProductsApi } from './features/products/services/products-api';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css',
 })
 export class App {
   public productsApi = inject(ProductsApi);
